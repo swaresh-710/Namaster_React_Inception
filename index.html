@@ -6,17 +6,20 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="container">
+  
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <div id="root">
 
   </div>
 
 
 
   <script>
-    const heading = document.createElement("h1")
-    heading.innerHTML = "Hello friend through dom"
-
-    document.getElementById('container').appendChild(heading)
+    const heading = React.createElement('h1', {id : "heading"}, "Hello friend through React create Element")
+  const root = ReactDOM.createRoot(document.getElementById('root'))
+  root.render(heading)
   </script>
 </body>
 </html>
